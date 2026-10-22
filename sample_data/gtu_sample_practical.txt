@@ -1,0 +1,22 @@
+Subject: Python Programming / Data Structures Practical
+Practical title: Linear Search in Python
+Aim: To write a Python program that searches for a target value in a list using the linear search technique.
+
+Code:
+def linear_search(numbers, target):
+    for index in range(len(numbers)):
+        if numbers[index] == target:
+            return index
+    return -1
+
+values = [12, 7, 19, 4, 25]
+key = 19
+result = linear_search(values, key)
+if result != -1:
+    print("Element found at index", result)
+else:
+    print("Element not found")
+
+Expected result for the supplied input: Element found at index 2
+
+Key concepts: list, function, loop, condition, return value, index, time complexity.

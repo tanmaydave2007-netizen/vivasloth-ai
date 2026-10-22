@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7f1">
+  <meta name="description" content="VivaSloth turns GTU syllabi, practical manuals, screenshots and code into study packs, exam answers and viva practice using an open-weight model through OpenRouter.">
+  <title>{{ title }} · Study smart, stay calm</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#home" data-page="home" aria-label="VivaSloth home">
+        <span class="brand-mark" aria-hidden="true">🦥</span>
+        <span class="brand-copy"><b>Viva<span>Sloth</span></b><small>STUDY SMART · STAY CALM</small></span>
+      </a>
+      <div class="sidebar-label">WORKSPACE</div>
+      <nav class="side-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-page="home"><span class="nav-icon">⌂</span><span>Home</span></button>
+        <button class="nav-item" data-page="study"><span class="nav-icon">✧</span><span>Study Studio</span><span class="nav-count">6 tools</span></button>
+        <button class="nav-item" data-page="syllabus"><span class="nav-icon">▤</span><span>Syllabus Map</span></button>
+        <button class="nav-item" data-page="mock"><span class="nav-icon">◉</span><span>Mock Viva</span></button>
+        <button class="nav-item" data-page="history"><span class="nav-icon">↺</span><span>History</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sloth-tip"><span class="tip-emoji">🌿</span><b>Slow down. Learn better.</b><p>Small study sessions beat last-minute panic.</p></div>
+        <button class="nav-item settings-link" data-page="settings"><span class="nav-icon">⚙</span><span>Settings</span></button>
+        <div class="sidebar-footer"><span class="tiny-status" id="sidebarStatusDot"></span><span id="sidebarStatusText">Checking AI setup…</span></div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Open navigation">☰</button>
+        <div class="breadcrumb"><span>VivaSloth</span><b>/</b><strong id="breadcrumbTitle">Home</strong></div>
+        <div class="topbar-right">
+          <span class="connection-pill"><span class="status-dot" id="statusDot"></span><span id="statusText">Checking API setup…</span></span>
+          <span class="model-pill"><span>✦</span> Cloud model · no download</span>
+          <span class="avatar">CE</span>
+        </div>
+      </header>
+
+      <section class="page-view active" id="homeView">
+        <div class="page-heading"><div><span class="eyebrow">SLOW AND STEADY · HACKTOBERFEST 2026</span><h1>Your calm study desk.</h1><p>Turn the material you already have into the practice you need.</p></div><button class="button-primary heading-action" data-go-mode="pack">＋ Create study pack</button></div>
+
+        <section class="welcome-panel">
+          <div class="welcome-copy"><span class="welcome-tag"><span class="green-dot"></span> YOUR STUDY BUDDY IS READY</span><h2>Practicals sorted.<br><em>Stress turned down.</em></h2><p>Upload a GTU syllabus, lab manual, code file or even a screenshot. VivaSloth helps turn it into understandable notes, marks-wise answers and viva practice.</p><div class="welcome-actions"><button class="button-light" data-go-mode="pack">Start preparing <span>↗</span></button><span class="privacy-small">⌑ Your files aren't saved by the app</span></div></div>
+          <div class="welcome-art" aria-hidden="true"><div class="art-orbit orbit-a"></div><div class="art-orbit orbit-b"></div><div class="art-leaf leaf-one">✳</div><div class="art-leaf leaf-two">✦</div><div class="sloth-illustration"><span class="sloth-ear ear-left"></span><span class="sloth-ear ear-right"></span><span class="sloth-face">🦥</span><span class="sloth-branch"></span></div><div class="floating-label label-manual"><span>✓</span> Syllabus aware</div><div class="floating-label label-viva"><span>✦</span> Viva pack ready</div><div class="art-sticker">LESS PANIC<br><b>MORE PRACTICE</b></div></div>
+        </section>
+
+        <div class="section-row"><div><span class="section-kicker">PICK UP WHERE YOU NEED</span><h2>What are we working on today?</h2></div><button class="quiet-link" data-page="study">All tools <span>→</span></button></div>
+        <section class="feature-grid">
+          <button class="feature-card feature-green" data-go-mode="pack"><span class="feature-icon">▣</span><span class="feature-label">MOST POPULAR</span><h3>Practical Prep Pack</h3><p>Aim, theory, algorithm, common errors and a 5-minute revision list.</p><span class="feature-link">Make my pack <b>↗</b></span></button>
+          <button class="feature-card feature-lilac" data-go-mode="syllabus"><span class="feature-icon">▤</span><span class="feature-label">GTU READY</span><h3>Syllabus to Study Map</h3><p>Organize units, identify prerequisites and build a manageable 7-day plan.</p><span class="feature-link">Map my syllabus <b>↗</b></span></button>
+          <button class="feature-card feature-blue" data-go-mode="gtu"><span class="feature-icon">✎</span><span class="feature-label">EXAM MODE</span><h3>GTU Marks-wise Answer</h3><p>Practise 2, 3, 4, 5 or 7-mark answers in simple exam-ready English.</p><span class="feature-link">Write an answer <b>↗</b></span></button>
+          <button class="feature-card feature-orange" data-go-mode="image"><span class="feature-icon">▧</span><span class="feature-label">SCREENSHOT MAGIC</span><h3>Screenshot to Notes</h3><p>Upload a photo of notes, a question, a diagram or code and structure it.</p><span class="feature-link">Read a screenshot <b>↗</b></span></button>
+          <button class="feature-card feature-mint" data-go-mode="explain"><span class="feature-icon">⌘</span><span class="feature-label">BEGINNER FRIENDLY</span><h3>Explain My Code</h3><p>Understand logic line by line and find common programming mistakes.</p><span class="feature-link">Explain code <b>↗</b></span></button>
+          <button class="feature-card feature-rose" data-page="mock"><span class="feature-icon">◉</span><span class="feature-label">PRACTISE OUT LOUD</span><h3>Mock Viva</h3><p>Answer one question at a time and get kind, honest feedback out of 5.</p><span class="feature-link">Start practising <b>↗</b></span></button>
+        </section>
+
+        <section class="lower-grid">
+          <div class="panel recent-panel"><div class="panel-heading"><div><span class="section-kicker">YOUR RECENT WORK</span><h3>Pick up where you left off</h3></div><button class="quiet-link" data-page="history">View history →</button></div><div id="recentActivity" class="recent-activity"><div class="empty-recent"><span>✦</span><div><b>Your study history will appear here</b><p>Generate a pack or answer to save it locally in this browser.</p></div></div></div></div>
+          <div class="panel promise-panel"><span class="promise-icon">⌑</span><span class="section-kicker">OPEN-WEIGHT AI</span><h3>Less setup.<br><em>More control.</em></h3><p>No large model download. Your app calls the configured open-weight model through OpenRouter, and you can change the model in your local `.env` file.</p><div class="promise-footer"><span>✓ Small setup</span><span>✓ Changeable model</span></div></div>
+        </section>
+      </section>
+
+      <section class="page-view" id="studyView">
+        <div class="page-heading compact-heading"><div><span class="eyebrow">YOUR STUDY WORKSPACE</span><h1 id="studyPageTitle">Study Studio</h1><p id="studyPageDescription">Add notes, code, a syllabus or a screenshot. Choose what you want to make.</p></div><span class="cloud-note"><span>●</span> Text/images are sent to OpenRouter for AI processing</span></div>
+        <section class="studio-panel">
+          <div class="studio-header"><div><span class="step-number">01</span><div><h2>Give it your material</h2><p>Mix pasted notes with multiple files, if helpful.</p></div></div><span class="required-tag">SOURCE INPUT</span></div>
+          <div class="fields-grid"><div><label for="practicalTitle" class="field-label">Topic / practical name</label><input id="practicalTitle" class="text-input" maxlength="160" placeholder="e.g. Binary Search in C"></div><div><label for="subject" class="field-label">Subject</label><input id="subject" class="text-input" maxlength="100" value="Computer Engineering" placeholder="e.g. Data Structures"></div></div>
+          <div class="fields-grid extra-fields"><div id="marksWrap" class="hidden"><label for="marks" class="field-label">GTU answer length</label><select id="marks" class="text-input"><option value="2">2 marks · very short</option><option value="3">3 marks · short answer</option><option value="4">4 marks · medium answer</option><option value="5" selected>5 marks · detailed points</option><option value="7">7 marks · full explanation</option></select></div><div id="examQuestionWrap" class="hidden"><label for="examQuestion" class="field-label">Question to answer (optional with source)</label><input id="examQuestion" class="text-input" placeholder="e.g. Explain normalization in DBMS."></div></div>
+          <div class="mode-picker" role="group" aria-label="Study tool">
+            <button class="mode-chip active" data-mode="pack"><span>✦</span> Prep Pack</button>
+            <button class="mode-chip" data-mode="explain"><span>⌘</span> Explain Code</button>
+            <button class="mode-chip" data-mode="viva"><span>◉</span> Viva Questions</button>
+            <button class="mode-chip" data-mode="gtu"><span>✎</span> GTU Answer</button>
+            <button class="mode-chip" data-mode="syllabus"><span>▤</span> Syllabus Map</button>
+            <button class="mode-chip" data-mode="image"><span>▧</span> Screenshot Notes</button>
+          </div>
+          <div class="studio-grid">
+            <div class="source-column">
+              <label for="sourceText" class="field-label">Paste syllabus, notes, question or code</label>
+              <textarea id="sourceText" class="source-input" rows="7" placeholder="Paste the practical aim, syllabus units, teacher's notes, code, or a question here…"></textarea>
+              <div class="upload-divider"><span></span><b>OR ATTACH FILES</b><span></span></div>
+              <label class="upload-zone" id="uploadZone" for="documents"><input id="documents" name="documents" type="file" multiple accept=".pdf,.txt,.md,.py,.c,.cpp,.h,.java,.js,.json,.html,.css,.png,.jpg,.jpeg,.webp"><span class="upload-graphic">⇧</span><b>Drop files here or <u>browse files</u></b><small>Syllabus / practical PDF, TXT, code or screenshot · up to 12 MB total</small></label>
+              <div id="fileList" class="file-list hidden"></div>
+              <button class="sample-link" id="demoButton" type="button">Load a sample practical <span>↗</span></button>
+              <p class="privacy-note"><span>ⓘ</span> This local app does not save uploads to disk. Files or extracted text are sent to OpenRouter and its model provider to generate your result. Don't upload sensitive information.</p>
+            </div>
+            <aside class="action-column"><div class="action-preview"><span class="preview-icon" id="modeIcon">✦</span><span class="section-kicker">YOUR SHORTCUT</span><h3 id="modeTitle">Practical Prep Pack</h3><p id="modeDescription">Create a clear, exam-friendly study pack from your material.</p></div><div class="includes-list" id="outputIncludes"><div><span>✓</span> Aim and concept in simple words</div><div><span>✓</span> Algorithm and code walkthrough</div><div><span>✓</span> Viva questions with answers</div><div><span>✓</span> Common errors and quick revision</div></div><button class="button-primary full-button" id="generateButton" type="button"><span id="generateLabel">Make my prep pack</span><span>↗</span></button><button class="button-secondary full-button" id="startMockButton" type="button">Start interactive mock viva →</button><div class="loading-row hidden" id="generateLoading"><span class="spinner"></span><span>OpenRouter is preparing your study material…</span></div><div class="model-info"><span class="model-chip">Qwen3.8 · 27B Free</span><small>Open-weight · hosted inference</small></div></aside>
+          </div>
+        </section>
+        <section class="result-panel hidden" id="resultCard" aria-live="polite"><div class="result-heading"><div><span class="section-kicker">GENERATED FOR YOU</span><h2 id="resultTitle">Your prep pack</h2><p id="resultSubtitle">Built from your provided material.</p></div><div class="result-actions"><button class="button-secondary" id="copyButton">Copy result</button><button class="button-secondary" id="downloadButton">Download .txt</button></div></div><div id="resultContent" class="result-content"></div><div class="source-warning">ⓘ Study aid only, not an official GTU answer key. Verify important details with your current syllabus or teacher.</div></section>
+        <section class="result-panel hidden" id="mockCard" aria-live="polite"><div class="result-heading"><div><span class="section-kicker">PRACTISE WITHOUT PRESSURE</span><h2>Interactive Mock Viva</h2><p>Answer one question at a time. You can learn from mistakes here.</p></div><span class="question-counter">QUESTION <b id="questionNumber">01</b></span></div><div class="question-panel"><span class="section-kicker">YOUR AI ASKS</span><p id="currentQuestion">Your first question will appear here.</p></div><label for="mockAnswer" class="field-label">Your answer</label><textarea id="mockAnswer" class="source-input" rows="4" placeholder="Answer in your own words…"></textarea><div class="mock-actions"><span class="privacy-note">Your answer is sent to OpenRouter for feedback.</span><button class="button-primary" id="submitAnswer">Check answer ↗</button></div><div class="loading-row hidden" id="mockLoading"><span class="spinner"></span><span>Reviewing your answer…</span></div><div class="feedback-panel hidden" id="feedbackBox"><div id="feedbackContent" class="result-content"></div><button class="button-secondary" id="nextQuestionButton">Next question →</button></div></section>
+        <div class="error-banner hidden" id="errorBanner" role="alert"><span class="error-mark">!</span><span id="errorText">Something went wrong.</span><button type="button" id="closeError" aria-label="Close error">×</button></div>
+      </section>
+
+      <section class="page-view" id="historyView"><div class="page-heading"><div><span class="eyebrow">YOUR PERSONAL STUDY LOG</span><h1>Recent activity.</h1><p>Results are stored only in this browser, so you can revisit the last things you generated.</p></div><button class="button-secondary" id="clearHistoryButton">Clear history</button></div><div id="historyList" class="history-list"><div class="empty-state"><span>↺</span><h3>No saved activity yet</h3><p>Your packs and GTU answers will appear here after you generate them.</p><button class="button-primary" data-go-mode="pack">Create your first pack →</button></div></div></section>
+
+      <section class="page-view" id="settingsView"><div class="page-heading"><div><span class="eyebrow">SET UP YOUR STUDY BUDDY</span><h1>Settings & privacy.</h1><p>Check how the app connects to its model and what happens to your study material.</p></div></div><div class="settings-grid"><section class="settings-card"><div class="settings-card-icon">✦</div><span class="section-kicker">MODEL CONFIGURATION</span><h3>Open-weight AI connection</h3><div class="setting-row"><span>API key</span><b id="settingsKeyStatus">Checking…</b></div><div class="setting-row"><span>Model</span><code id="settingsModel">Loading…</code></div><div class="setting-row"><span>Local model files</span><b class="good-setting">Not required</b></div><p class="settings-help">The model runs on an OpenRouter provider. Free endpoints can be busy or rate-limited. You can change the selected model in the `.env` file beside `app.py`.</p><a class="external-link" href="https://openrouter.ai/models?max_price=0" target="_blank" rel="noopener">Browse free models ↗</a></section><section class="settings-card"><div class="settings-card-icon">⌑</div><span class="section-kicker">DATA & PRIVACY</span><h3>Know where your data goes</h3><ul class="privacy-list"><li><span>✓</span> This app does not save uploaded files to disk.</li><li><span>✓</span> Generated history is stored in this browser only.</li><li><span>!</span> Extracted text, screenshots and answers are sent to OpenRouter for AI processing.</li><li><span>!</span> Do not upload passwords, IDs or confidential records.</li></ul><button class="button-secondary" id="clearLocalHistorySettings">Clear browser history</button></section></div></section>
+
+      <footer class="app-footer"><span class="footer-brand">🦥 VivaSloth AI</span><span>Made for student life · GTU-friendly study workflow</span><span class="footer-online"><i class="status-dot"></i> <span id="footerStatus">OpenRouter setup</span></span></footer>
+    </main>
+  </div>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
