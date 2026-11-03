@@ -1,4 +1,4 @@
-# VivaSloth AI: સરળ ગુજરાતી માર્ગદર્શિકા
+# VivaSloth AI: સરળ ગુજરાતી માર્ગદર્શિકા 
 
 આ updated versionમાં sidebar dashboard અને નવા study tools છે. `Qwen GGUF` model અથવા `llama-server.exe` download કરવાની જરૂર નથી. AI માટે OpenRouterનું hosted open-weight model વપરાય છે, એટલે internet જોઈએ અને text તથા screenshot OpenRouterને મોકલાય છે.
 
