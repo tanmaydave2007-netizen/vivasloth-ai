@@ -22,7 +22,7 @@
 
 ## Test કરવાની સરળ રીત
 
-1. Study Studio ખોલ અને `Load a sample practical` દબાવ.
+1. Study Studio ખોલ અને `Load a sample practical` દબાવ. 
 2. `Make my prep pack` દબાવ.
 3. `GTU Answer` mode પસંદ કરીને 5 marksનો જવાબ test કર.
 4. પછી કોઈ readable notesનો screenshot upload કરીને `Screenshot Notes` test કર.
