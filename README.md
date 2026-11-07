@@ -11,7 +11,7 @@ VivaSloth uses an open-weight model hosted through OpenRouter. No large model fi
 - GTU-style answers for 2, 3, 4, 5 or 7 marks.
 - Syllabus-to-study map and a suggested 7-day revision plan.
 - Screenshot-to-notes for image files, depending on model image support.
-- Multiple source files, browser-local history and interactive mock viva.
+- Multiple source files, browser-local history and interactive mock viva. 
 
 ## Deploy to Render
 
